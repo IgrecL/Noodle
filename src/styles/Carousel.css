@@ -42,6 +42,7 @@
     transform: scale(1.7);
     transition: transform 0.2s ease;
     z-index: 1;
+    box-shadow: 0 0 4em black;
 }
 
 .carousel-button {
