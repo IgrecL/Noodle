@@ -3,7 +3,7 @@ import logo from '../assets/logo.png';
 import '../styles/Noodle.css';
 import { Link } from 'react-router-dom';
 import '../styles/Link.css'
-import '../styles/Bebas.css'
+import Searchbar from "./Searchbar";
 
 function Navbar(){
 return(
@@ -13,6 +13,7 @@ return(
     <nav className='navbar'>
         <Link className="custom-link" to="/">Accueil</Link>
         <Link className="custom-link" to="/Mylist">Ma Liste</Link>
+      <Searchbar></Searchbar>
     </nav>
     </header>)
 } 
