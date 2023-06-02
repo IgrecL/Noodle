@@ -9,10 +9,10 @@ function Navbar(){
 return(
 
     <header className="header">
-    <img className='header__logo' src={logo} alt="Noodle Logo"/>
+    <img className='navbar__logo' src={logo} alt="Noodle Logo"/>
     <nav className='navbar'>
     <NavLink className="custom-link" to="/" activeClassName="active">Accueil</NavLink>
-    <NavLink className="custom-link " to="/Mylist" activeClassName="active">Ma Liste</NavLink>
+    <NavLink className="custom-link " to="/Mylist" activeClassName="active">Ma liste</NavLink>
     <Searchbar></Searchbar>
     </nav>
     </header>)

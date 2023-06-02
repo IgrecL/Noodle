@@ -6,7 +6,7 @@ import CategoryList from '../components/CategoryList';
 function Mylist() {  
     const categories = [
         {
-            title: 'Ma Liste',
+            title: 'Ma liste',
             images: [
                 'https://cdn.discordapp.com/attachments/1105829710899978280/1114189551326474240/boss.png',
                 'https://cdn.discordapp.com/attachments/1105829710899978280/1114189551326474240/boss.png',

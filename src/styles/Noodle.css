@@ -63,19 +63,12 @@ body {
   color:#d4d4d4
 }
 
-.header__logo {
-	padding: 10px;
-	width: 7% ;
-	margin-left : 90px;
-	margin-right : 80px
-	
-}
+
 
 /* Style de la barre de navigation */
 .navbar {
 	display: flex;
 	align-items: center;
-	margin-left: 20px;
 }
 
 .navbar__item {
@@ -87,12 +80,11 @@ body {
 }
 
 .navbar__logo {
-  padding: 5px;
-  font-weight: bold;
-  cursor: pointer;
-  height: auto;
-  width: 10px; /* Modifier la valeur en fonction de la taille souhaitée */
-  font-size: 20px;
+	padding: 10px;
+	width: 150px ;
+	margin-left : 80px;
+	margin-right : 45px
+	
 }
   
   .navbar__item:hover {
