@@ -37,6 +37,7 @@
   .navbar {
     color:#d4d4d4;
     display: flex;
+    width: 100%;
     align-items: center;
     margin-left: 20px;
   }
@@ -63,12 +64,24 @@
   }
 
   /* Style de la Searchbar */
-  .search {
-    width: 200%;
-    background-color: #ffffff; /* TODO : Trouver un moyen de rendre ça joli */
+  .search__main {
+    width: 60%;
+    background-color: aqua;
+  }
+
+  .search__search {
+    float: left;
+    width: 92%;
+    background-color: #ffffff;
     border-radius: 5px 5px 0px 0px;
   }
-  
+
+  .search__fleche {
+    float: right;
+    padding: 10px;
+    width: 8% ;
+  }
+
   /* Style de la bannière principale */
   .banner {
     position: relative;
