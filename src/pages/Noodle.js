@@ -95,20 +95,14 @@ function Noodle() {
     ];
       
     return (    
-        <div className="netflix">
+        <div>
             <Navbar />
-            <div className="background-container">
-                <img className="background-image" src=
-                'https://wallpaperaccess.com/full/3949089.jpg'
-                alt="Background Image" />
-                <div className="fade-overlay-top" />
-                <div className="fade-overlay-bottom" />
-                <span className="overlay">
-                    <CategoryList categories={categories} />
+            <div className='background-container'></div>
+             <span className="overlay">
+            <CategoryList categories={categories} />
                 </span>
             </div>
-        </div>
-    );
+ )
 };
 
 export default Noodle;

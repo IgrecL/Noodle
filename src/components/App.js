@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Mylist from "../pages/Mylist";
 import Noodle from "../pages/Noodle"
-import Navbar from "./Navbar";
+
 function App() {
 	return (
 <BrowserRouter>  
