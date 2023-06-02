@@ -1,11 +1,12 @@
 import { React, useState } from "react";
-import TextField from "@mui/material/TextField"; // npm install @mui/material
+import TextField from "@mui/material/TextField";
+import fleche from '../assets/fleche.png';
 // import List from "./Components/List"
 
 function Searchbar() {
   return (
-    <div className="search__main">
-      <div className="search__search">
+    <nav className="search__main">
+      <nav className="search__search">
         <TextField
           id="outlined-secondary"
           variant="filled"
@@ -13,9 +14,10 @@ function Searchbar() {
           label="Rechercher un cours"
           color="primary"
         />
-      </div>
+      </nav>
+      <img className='search__fleche' src={fleche} alt="fleche"/>
       {/* <List /> */}
-    </div>
+    </nav>
   );
 }
 
