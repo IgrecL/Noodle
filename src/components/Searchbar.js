@@ -4,8 +4,8 @@ import TextField from "@mui/material/TextField"; // npm install @mui/material
 
 function Searchbar() {
   return (
-    <div className="main">
-      <div className="search">
+    <div className="search__main">
+      <div className="search__search">
         <TextField
           id="outlined-secondary"
           variant="filled"

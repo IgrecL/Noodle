@@ -36,6 +36,7 @@
   /* Style de la barre de navigation */
   .navbar {
     display: flex;
+    width: 100%;
     align-items: center;
     margin-left: 20px;
   }
@@ -62,9 +63,12 @@
   }
 
   /* Style de la Searchbar */
-  .search {
-    width: 200%;
-    background-color: #ffffff; /* TODO : Trouver un moyen de rendre ça joli */
+  .search__main {
+    width: 60%;
+  }
+
+  .search__search {
+    background-color: #ffffff;
     border-radius: 5px 5px 0px 0px;
   }
   
