@@ -3,6 +3,7 @@ import logo from '../assets/logo.png';
 import '../styles/Noodle.css';
 import { Link } from 'react-router-dom';
 import '../styles/Link.css'
+import '../styles/Bebas.css'
 
 function Navbar(){
 return(
