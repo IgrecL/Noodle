@@ -3,6 +3,7 @@ import logo from '../assets/logo.png';
 import '../styles/Noodle.css';
 import { Link , NavLink } from 'react-router-dom';
 import '../styles/Link.css'
+import '../styles/Searchbar.css'
 import Searchbar from "./Searchbar";
 import { useEffect, useState } from 'react';
 

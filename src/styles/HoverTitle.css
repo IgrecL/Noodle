@@ -1,5 +1,5 @@
 .hovered-element {
-    font-size: 30px;
+    font-size: 20px;
     color: rgb(197, 194, 194);
 	font-weight: bold;
 }
@@ -9,7 +9,7 @@
 }
 
 .displayed-element {
-    font-size: 20px;
+    font-size: 12px;
 	font-weight: bold;
 	color: lightblue;
 	margin-left: 20px;
