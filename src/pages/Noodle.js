@@ -97,7 +97,7 @@ function Noodle() {
     return (    
         <div>
             <Navbar />
-            <div className='background-container'></div>
+            <div className='background-image'/>
              <span className="overlay">
             <CategoryList categories={categories} />
                 </span>
