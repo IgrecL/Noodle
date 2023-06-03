@@ -113,7 +113,9 @@ function Noodle() {
     return (    
         <div>
             <Navbar />
-            <div className='background-image' />
+            <div className='background-image'>
+                <div className='fade-overlay'/>
+            </div>
             <span className="overlay">
                 <div>
                     Éléments de la base de données :
