@@ -13,12 +13,12 @@ body {
 }
 
 .background-image {
-  filter:brightness(125%);
+  filter:brightness(100%);
   bottom:10%;
   width: 100%;
   height: 100%;
   position : absolute;
-  background-image: linear-gradient(to bottom, rgba(20, 20, 20, 0), rgba(20, 20, 20, 0.8)),url('../assets/background.jpg');
+  background-image: linear-gradient(to bottom, rgba(20, 20, 20, 0), rgba(20, 20, 20, 1)),url('../assets/background.jpg');
   background-size: cover;
 }
 
@@ -32,70 +32,7 @@ body {
   height: 100%;
 }
 
-/* Style de l'en-tête */
-.header {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	height: 80px;
-	display: flex;
-	align-items: center;
-	background-color:rgb(20, 20, 20);
-	z-index: 999;
-  color:#d4d4d4
-}
 
-
-
-/* Style de la barre de navigation */
-.navbar {
-	display: flex;
-	align-items: center;
-}
-.header.transparent {
-  background-color: transparent;
-  transition: background-color 0.5s ease; /* Ajoutez une transition de 0.5s pour un effet lisse */
-}
-.navbar__item {
-	padding : 15px;
-	font-size: 20px;
-	font-weight: bold;
-	margin-right: 15px;
-	cursor: pointer;
-}
-
-.navbar__logo {
-	padding: 10px;
-	width: 110px ;
-	margin-left : 50px;
-	margin-right : 25px
-	
-}
-  
-  .navbar__item:hover {
-    color: #d4d4d4;
-  }
-
-  /* Style de la Searchbar */
-  .search__main {
-    position:right;
-    width: 50%;
-     background-color: aqua;
-  }
-
-  .search__search {
-    float: left;
-    width: 92%;
-    background-color: #ffffff;
-    border-radius: 5px 5px 0px 0px;
-  }
-
-  .search__fleche {
-    float: right;
-    padding: 10px;
-    width: 8% ;
-  }
 
   /* Style de la bannière principale */
   .banner {

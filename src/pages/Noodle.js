@@ -2,6 +2,7 @@ import React from 'react';
 import CategoryList from '../components/CategoryList';
 import logo from '../assets/logo.png';
 import '../styles/Noodle.css';
+import '../styles/Navbar.css'
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 
