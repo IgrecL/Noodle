@@ -1,13 +1,15 @@
-// Import required packages and modules
 const express = require('express');
-const mongoose = require('mongoose');
+const cors = require('cors');
 const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
 
-// Create an instance of the Express app
 const app = express();
 
 // Set up middleware
 app.use(bodyParser.json());
+
+// Activer le middleware CORS
+app.use(cors());
 
 // Connect to MongoDB
 mongoose
@@ -17,7 +19,6 @@ mongoose
     })
     .then(() => console.log('Connected to MongoDB'))
     .catch((error) => console.error('MongoDB connection error:', error));
-
 
 // Create a model based on the schema
 const CourseModel = require('./models/Course')
