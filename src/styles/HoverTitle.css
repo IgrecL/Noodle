@@ -14,4 +14,20 @@
 	color: lightblue;
 	margin-left: 20px;
 	display: inline-block;
+	opacity: 0; 
+    transition: opacity 1s ease-in-out;
 }
+
+.displayed-element.visible {
+	animation: slideLeft 0.25s linear forwards;
+	opacity: 1; /* Ajoutez cette ligne pour afficher le texte avec une transition */
+  }
+  
+  @keyframes slideLeft {
+	0% {
+	  transform: translateX(-40%);
+	}
+	100% {
+	  transform: translateX(0%);
+	}
+  }

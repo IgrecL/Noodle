@@ -16,7 +16,7 @@ function Navbar(){
         const handleScroll = () => {
           const scrollPosition = window.scrollY;
           const windowHeight = window.innerHeight;
-          const scrollThreshold = windowHeight * 0.69; 
+          const scrollThreshold = windowHeight * 0.15; 
           // Modifier la valeur 1000 selon la position où vous voulez que le changement de style se produise
           if (scrollPosition > scrollThreshold) {
             setNavbarTransparent(false);
@@ -41,7 +41,7 @@ return(
     <nav className='navbar'>
     <NavLink className="custom-link" to="/" activeClassName="active">Accueil</NavLink>
     <NavLink className="custom-link " to="/Mylist" activeClassName="active">Ma liste</NavLink>
-    <Searchbar></Searchbar>
+    <Searchbar/>
     </nav>
     </header>)
 } 

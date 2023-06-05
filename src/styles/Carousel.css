@@ -31,7 +31,6 @@
     flex-direction: column;
     position: relative;
     overflow: hidden;
-    border-radius: 3%;
     transition: transform 0.2s ease;
   }
   
@@ -45,7 +44,7 @@
   .image-wrapper:hover {
     transform: scale(1.5); /* Ajustez la valeur de scale selon vos préférences */
     z-index: 1;
-    border-radius:10%;
+    border-radius:3%;
     box-shadow: 0 0 4em black;
   }
 

@@ -17,8 +17,7 @@ const HoverTitle = ({text1, text2}) => {
         <span className="hovered-element">
             {text1}
         </span>
-        {isHovered && <div className="displayed-element">{text2} &gt;</div>}
-    </div>
+        <div className={`displayed-element ${isHovered ? 'visible' : ''}`}>{text2} &gt;</div>    </div>
   );
 };
 
