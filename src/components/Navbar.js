@@ -4,9 +4,11 @@ import '../styles/Noodle.css';
 import { Link , NavLink } from 'react-router-dom';
 import '../styles/Link.css'
 import '../styles/Searchbar.css'
+import '../styles/Notification.css'
 import Searchbar from "./Searchbar";
 import { useEffect, useState } from 'react';
 import Profilepicture from './Profilepicture';
+import notif from '../assets/notification.png'
 
 
 function Navbar(){
@@ -44,6 +46,7 @@ return(
     <NavLink className="custom-link " to="/Mylist" activeClassName="active">Ma liste</NavLink>
     <Searchbar/>
     <Profilepicture/>
+    <img className='notification' src={notif} alt='logonotif'></img>
     </nav>
    </header>)
 } 
