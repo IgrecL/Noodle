@@ -39,10 +39,12 @@ return(
     <header className={`header ${isNavbarTransparent ? 'transparent' : ''}`}>
     <img className='navbar__logo' src={logo} alt="Noodle Logo"/>
     <nav className='navbar'>
-    <NavLink className="custom-link" to="/" activeClassName="active">Accueil</NavLink>
-    <NavLink className="custom-link " to="/Mylist" activeClassName="active">Ma liste</NavLink>
-    <Searchbar/>
+      <NavLink className="custom-link" to="/" activeClassName="active">Accueil</NavLink>
+      <NavLink className="custom-link " to="/Mylist" activeClassName="active">Ma liste</NavLink>
     </nav>
+    <div className="searchbar">
+      <Searchbar />
+    </div>
     </header>)
 } 
 export default Navbar

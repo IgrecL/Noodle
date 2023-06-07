@@ -1,23 +1,18 @@
 import { React, useState } from "react";
 import TextField from "@mui/material/TextField";
-import fleche from '../assets/fleche.png';
+import Input from '@mui/material/Input';
+import loupe from '../assets/loupe_blanc.png';
 // import List from "./Components/List"
 
 function Searchbar() {
   return (
-    <nav className="search__main">
-      <nav className="search__search">
-        <TextField
-          id="outlined-secondary"
-          variant="filled"
-          fullWidth 
-          label="Rechercher un cours"
-          color="primary"
-        />
-      </nav>
-      <img className='search__fleche' src={fleche} alt="fleche"/>
+    <div className="search__main">
+      <div className="search__search">
+        <img className="search__loupe" src={loupe} alt="loupe"/>
+        <input className="search__input" placeholder="Cours, Profs, etc" />
+      </div>
       {/* <List /> */}
-    </nav>
+    </div>
   );
 }
 
