@@ -11,124 +11,43 @@ import Trending from '../components/Trending'
 
 function Noodle() {
 
-    const [items, setItems] = useState([]);
+    const [courses, setCourses] = useState([]);
+    const ues = [
+        'Systèmes et Services Informatiques',
+        'Architectures LAN et WAN'
+    ]; 
     
     useEffect(() => {
-        // Retrieve items from the database
-        axios.get('http://localhost:4000/courses')
-        .then((response) => {
-            setItems(response.data);
-        })
-        .catch((error) => {
-            console.error('Error retrieving items:', error);
-        });
-    }, []);
-    
-    const categories = [
-        {
-            title: 'Category 1',
-            images: [
-                'https://cdn.discordapp.com/attachments/1105829710899978280/1114189551326474240/boss.png',
-                'https://cdn.discordapp.com/attachments/1105829710899978280/1114189551326474240/boss.png',
-                'https://cdn.discordapp.com/attachments/1105829710899978280/1114189551326474240/boss.png',
-                'https://cdn.discordapp.com/attachments/1105829710899978280/1114189551326474240/boss.png',
-                'https://cdn.discordapp.com/attachments/1105829710899978280/1114189551326474240/boss.png',
-                'https://cdn.discordapp.com/attachments/1105829710899978280/1114189551326474240/boss.png',
-                'https://cdn.discordapp.com/attachments/1105829710899978280/1114189551326474240/boss.png',
-                'https://cdn.discordapp.com/attachments/1105829710899978280/1114189551326474240/boss.png',
-                'https://cdn.discordapp.com/attachments/1105829710899978280/1114189551326474240/boss.png',
-                'https://cdn.discordapp.com/attachments/1105829710899978280/1114189551326474240/boss.png',
-                'https://cdn.discordapp.com/attachments/1105829710899978280/1114189551326474240/boss.png',
-                'https://cdn.discordapp.com/attachments/1105829710899978280/1114189551326474240/boss.png',
-                'https://cdn.discordapp.com/attachments/1105829710899978280/1114189551326474240/boss.png',
-                'https://cdn.discordapp.com/attachments/1105829710899978280/1114189551326474240/boss.png',
-                'https://cdn.discordapp.com/attachments/1105829710899978280/1114189551326474240/boss.png',
-                'https://cdn.discordapp.com/attachments/1105829710899978280/1114189551326474240/boss.png',
+        const fetchObjets = async () => {
+            try {
+                const coursesArray = [];
 
-                ],
-        },
-        {
-            title: 'Category 2',
-            images: [
-                'https://cdn.discordapp.com/attachments/1105829710899978280/1114189551326474240/boss.png',
-                'https://cdn.discordapp.com/attachments/1105829710899978280/1114189551326474240/boss.png',
-                'https://cdn.discordapp.com/attachments/1105829710899978280/1114189551326474240/boss.png',
-                'https://cdn.discordapp.com/attachments/1105829710899978280/1114189551326474240/boss.png',
-                'https://cdn.discordapp.com/attachments/1105829710899978280/1114189551326474240/boss.png',
-                'https://cdn.discordapp.com/attachments/1105829710899978280/1114189551326474240/boss.png',
-                'https://cdn.discordapp.com/attachments/1105829710899978280/1114189551326474240/boss.png',
-                'https://cdn.discordapp.com/attachments/1105829710899978280/1114189551326474240/boss.png',
-                'https://cdn.discordapp.com/attachments/1105829710899978280/1114189551326474240/boss.png',
-                'https://cdn.discordapp.com/attachments/1105829710899978280/1114189551326474240/boss.png',
-                'https://cdn.discordapp.com/attachments/1105829710899978280/1114189551326474240/boss.png',
-                'https://cdn.discordapp.com/attachments/1105829710899978280/1114189551326474240/boss.png',
-                'https://cdn.discordapp.com/attachments/1105829710899978280/1114189551326474240/boss.png',
-                'https://cdn.discordapp.com/attachments/1105829710899978280/1114189551326474240/boss.png',
-                'https://cdn.discordapp.com/attachments/1105829710899978280/1114189551326474240/boss.png',
-                'https://cdn.discordapp.com/attachments/1105829710899978280/1114189551326474240/boss.png', 
-            ],
-        },
-        {
-            title: 'Category 3',
-            images: [
-                'https://cdn.discordapp.com/attachments/1105829710899978280/1114189551326474240/boss.png',
-                'https://cdn.discordapp.com/attachments/1105829710899978280/1114189551326474240/boss.png',
-                'https://cdn.discordapp.com/attachments/1105829710899978280/1114189551326474240/boss.png',
-                'https://cdn.discordapp.com/attachments/1105829710899978280/1114189551326474240/boss.png',
-                'https://cdn.discordapp.com/attachments/1105829710899978280/1114189551326474240/boss.png',
-                'https://cdn.discordapp.com/attachments/1105829710899978280/1114189551326474240/boss.png',
-                'https://cdn.discordapp.com/attachments/1105829710899978280/1114189551326474240/boss.png',
-                'https://cdn.discordapp.com/attachments/1105829710899978280/1114189551326474240/boss.png',
-                'https://cdn.discordapp.com/attachments/1105829710899978280/1114189551326474240/boss.png',
-                'https://cdn.discordapp.com/attachments/1105829710899978280/1114189551326474240/boss.png',
-                'https://cdn.discordapp.com/attachments/1105829710899978280/1114189551326474240/boss.png',
-                'https://cdn.discordapp.com/attachments/1105829710899978280/1114189551326474240/boss.png',
-                'https://cdn.discordapp.com/attachments/1105829710899978280/1114189551326474240/boss.png',
-                'https://cdn.discordapp.com/attachments/1105829710899978280/1114189551326474240/boss.png',
-                'https://cdn.discordapp.com/attachments/1105829710899978280/1114189551326474240/boss.png',
-                'https://cdn.discordapp.com/attachments/1105829710899978280/1114189551326474240/boss.png',    
-            ],
-        },
-        {
-            title: 'Category 4',
-            images: [
-                'https://cdn.discordapp.com/attachments/1105829710899978280/1114189551326474240/boss.png',
-                'https://cdn.discordapp.com/attachments/1105829710899978280/1114189551326474240/boss.png',
-                'https://cdn.discordapp.com/attachments/1105829710899978280/1114189551326474240/boss.png',
-                'https://cdn.discordapp.com/attachments/1105829710899978280/1114189551326474240/boss.png',
-                'https://cdn.discordapp.com/attachments/1105829710899978280/1114189551326474240/boss.png',
-                'https://cdn.discordapp.com/attachments/1105829710899978280/1114189551326474240/boss.png',
-                'https://cdn.discordapp.com/attachments/1105829710899978280/1114189551326474240/boss.png',
-                'https://cdn.discordapp.com/attachments/1105829710899978280/1114189551326474240/boss.png',
-                'https://cdn.discordapp.com/attachments/1105829710899978280/1114189551326474240/boss.png',
-                'https://cdn.discordapp.com/attachments/1105829710899978280/1114189551326474240/boss.png',
-                'https://cdn.discordapp.com/attachments/1105829710899978280/1114189551326474240/boss.png',
-                'https://cdn.discordapp.com/attachments/1105829710899978280/1114189551326474240/boss.png',
-                'https://cdn.discordapp.com/attachments/1105829710899978280/1114189551326474240/boss.png',
-                'https://cdn.discordapp.com/attachments/1105829710899978280/1114189551326474240/boss.png',
-                'https://cdn.discordapp.com/attachments/1105829710899978280/1114189551326474240/boss.png',
-                'https://cdn.discordapp.com/attachments/1105829710899978280/1114189551326474240/boss.png',     
-            ],
-        },
-    ];
-      
+                for (const ue of ues) {
+                    const response = await axios.get(`http://localhost:4000/courses/${ue}`);
+                    coursesArray.push(response.data);
+                }
+
+                setCourses(coursesArray);
+            } catch (error) {
+                console.error(error);
+            }
+        };
+
+        fetchObjets();
+    }, [ues]);
+
+    console.log("Test")
+    console.log(courses);
+
     return (    
         <div>
-          <Navbar />
+        <Navbar />
             <div className='background-image'>
                 <div className='fade-overlay'/>
             </div>
             <span className="overlay">
-            <Trending />
-                <CategoryList categories={categories} />
-                <div>
-                    Éléments de la base de données :
-                    {items.map((item) => (
-                        <>
-                            <div key={item._id}>{item.title} {item.shortTitle}</div>
-                        </>
-                    ))}
-                </div>
+                <Trending />
+                <CategoryList courses={courses} />
                 <Footer />
             </span>
           

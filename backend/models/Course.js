@@ -12,6 +12,20 @@ const CourseSchema = new mongoose.Schema({
     semester: {
         type: Number,
         required: true,
+    },
+    UE: {
+        type: String,
+        required: true,
+    },
+    image: {
+        type: String,
+        required: true,
+    },
+    description: {
+        type: String,
+    },
+    authors: {
+        type: String,
     }
 });
 

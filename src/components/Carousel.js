@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import '../styles/Carousel.css'
 
-const Carousel = ({ images }) => {
+const Carousel = ({courses}) => {
     const carouselRef = useRef(null);
 
     const SCROLL_AMOUNT = 1035; // Adjust the scroll amount as needed 
@@ -26,9 +26,9 @@ const Carousel = ({ images }) => {
                 &lt;
             </button>
             <div className="carousel-container" ref={carouselRef}>
-                {images.map((image, index) => (
+                {courses.map((course, index) => (
                     <div key={index} className="image-wrapper">
-                        <img src={image} alt={`Image ${index}`} className="carousel-image" />
+                        <img src={course.image} alt={`Image ${index}`} className="carousel-image" />
                     </div>
                 ))}
             </div>

@@ -3,17 +3,16 @@ import HoverTitle from './HoverTitle';
 import '../styles/CategoryList.css'
 
 
-const CategoryList = ({ categories }) => {
+const CategoryList = ({courses}) => {
 	return (
 		<div>
-			<div className='page'>Ouais la zone</div>
 			<ul className="category-list">
-				{categories.map((category, index) => (
+				{courses.map((category, index) => (
 					<li key={index} className="list-element">
 						<div className="category-title">
-							<HoverTitle text1={category.title} text2="Tout explorer" />
+							<HoverTitle text1={category[0].UE} text2="Tout explorer" />
 						</div>
-						<Carousel images={category.images} />
+						<Carousel courses={category} />
 					</li>
 				))}
 			</ul>

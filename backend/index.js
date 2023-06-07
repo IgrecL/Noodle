@@ -21,7 +21,8 @@ mongoose
     .catch((error) => console.error('MongoDB connection error:', error));
 
 // Create a model based on the schema
-const CourseModel = require('./models/Course')
+const CourseModel = require('./models/Course');
+const Course = require('./models/Course');
 
 // Define a route to retrieve all items from the database
 app.get('/courses', (req, res) => {
@@ -38,12 +39,16 @@ app.get('/courses', (req, res) => {
 // Define a route to add a new item to the database
 app.post('/courses', async (req, res) => {
   try {
-    const { title, shortTitle, semester } = req.body;
+    const { title, shortTitle, semester, UE, image, description, authors } = req.body;
 
     const newCourse = new CourseModel({
       title,
       shortTitle,
       semester,
+      UE,
+      image,
+      description,
+      authors,
     });
 
     await newCourse.save();
@@ -51,6 +56,18 @@ app.post('/courses', async (req, res) => {
   } catch (error) {
     console.error('Error saving item:', error);
     res.status(500).send('Error saving item');
+  }
+});
+
+// Search by value of UE
+app.get('/courses/:ue', async (req, res) => {
+  try {
+    const ue = req.params.ue;
+    const courses = await Course.find({ UE: ue });
+    res.json(courses);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Une erreur est survenue lors de la récupération des objets.' });
   }
 });
 
