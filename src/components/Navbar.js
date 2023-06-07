@@ -8,7 +8,8 @@ import '../styles/Notification.css'
 import Searchbar from "./Searchbar";
 import { useEffect, useState } from 'react';
 import Profilepicture from './Profilepicture';
-import notif from '../assets/notification.png'
+import Notification from './Notification';
+
 
 
 function Navbar(){
@@ -46,7 +47,7 @@ return(
     <NavLink className="custom-link " to="/Mylist" activeClassName="active">Ma liste</NavLink>
     <Searchbar/>
     <Profilepicture/>
-    <img className='notification' src={notif} alt='logonotif'></img>
+    <Notification/>
     </nav>
    </header>)
 } 
