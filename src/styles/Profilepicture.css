@@ -49,12 +49,19 @@
     left:80%;
 }
 
+
+
 .arrow{
     content: '';
     position: absolute;
     border-width: 5px;
     right:-20px;
-    top:40%;
+    top:50%;
     border-style: solid;
     border-color: white transparent transparent transparent;
+    transition: transform 0.2s ease;
+}
+
+.pp-wrapper:hover .arrow{
+    transform: translateY(-50%) rotate(180deg);
 }

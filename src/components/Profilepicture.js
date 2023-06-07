@@ -15,12 +15,12 @@ function ProfilePicture() {
   };
 
   return (
-        <div className='pp-wrapper' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+       <div className='pp-wrapper' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
           <img className='pp' src={pp} alt='profile picture' />
           <div className={`dropdown ${isDropdownOpen ? 'open' : ''}`}>
             <span>Gérer le profil</span>
           </div>
-          <div className='arrow'></div>
+          <div className='arrow '></div>
         </div>
       );
       
