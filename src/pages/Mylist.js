@@ -2,6 +2,7 @@ import React from 'react';
 import '../styles/Noodle.css';
 import Navbar from '../components/Navbar';
 import CategoryList from '../components/CategoryList';
+import Footer from '../components/Footer';
 
 function Mylist() {  
     const categories = [
@@ -40,7 +41,7 @@ function Mylist() {
                 <br></br>
                 <CategoryList categories={categories} />
             </div>
-
+          <Footer />
         </div>
     )   
 };
