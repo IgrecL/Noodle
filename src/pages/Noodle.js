@@ -6,6 +6,7 @@ import '../styles/Noodle.css';
 import '../styles/Navbar.css'
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 function Noodle() {
 
@@ -112,7 +113,7 @@ function Noodle() {
       
     return (    
         <div>
-            <Navbar />
+          <Navbar />
             <div className='background-image'>
                 <div className='fade-overlay'/>
             </div>
@@ -126,9 +127,11 @@ function Noodle() {
                     ))}
                 </div>
                 <CategoryList categories={categories} />
+                <Footer />
             </span>
+          
         </div>
-    )
+    );
 };
 
 export default Noodle;
