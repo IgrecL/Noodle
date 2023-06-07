@@ -6,6 +6,7 @@ import '../styles/Noodle.css';
 import '../styles/Navbar.css'
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
+import Trending from '../components/Trending';
 import Footer from '../components/Footer';
 
 function Noodle() {
@@ -118,6 +119,8 @@ function Noodle() {
                 <div className='fade-overlay'/>
             </div>
             <span className="overlay">
+                <Trending />
+                <CategoryList categories={categories} />
                 <div>
                     Éléments de la base de données :
                     {items.map((item) => (
@@ -126,10 +129,8 @@ function Noodle() {
                         </>
                     ))}
                 </div>
-                <CategoryList categories={categories} />
                 <Footer />
             </span>
-          
         </div>
     );
 };

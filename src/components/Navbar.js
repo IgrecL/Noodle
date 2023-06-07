@@ -45,6 +45,9 @@ return(
     <Searchbar/>
     <Profilepicture/>
     </nav>
+    <div className="searchbar">
+      <Searchbar />
+    </div>
     </header>)
 } 
 export default Navbar

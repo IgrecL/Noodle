@@ -1,0 +1,50 @@
+.trending-wrapper {
+    margin-left: 25px;
+    width: 70%;
+    margin-bottom: 2%;
+}
+
+.title-name {   
+    font-size: 160px;
+    line-height: 150px;
+    text-shadow: 1px 1px 5px black;    
+}
+
+.description {
+    font-size: 20px;
+    margin-top: 30px;
+    margin-left: 15px;
+    text-shadow: 1px 1px 5px black;    
+    width: 70%;
+}
+
+.buttons {
+    margin-top: 30px;
+    margin-left: 15px;
+}
+
+.button1 {
+    font-size: 20px;
+	font-family: 'Arial';
+    font-weight: bold;
+    color: black;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 4px;
+}
+
+.button2{
+    font-size: 21px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: none;
+	font-family: 'Arial';
+    font-weight: bold;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 4px;
+    margin-left: 10px;
+}
+
+.button2:hover {
+  background-color: rgba(0, 0, 0, 0.2); /* Hover and focus background color */
+}

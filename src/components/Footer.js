@@ -48,7 +48,7 @@ const Footer = () => {
           <div className="container">
             <p className="author-text">
               © 2023 Noodle. Tous droits réservés. <br />
-              Yohan LARBRE, Adam ABOUCAYA, Adam LAALOUJ, Frédéric ODON, Valentin RENAUD, Aziz BEN JEBALIA
+              Yohan LARBRE, Adam ABOUCAYA, Adam LAALOUJ, Frédéric ODDON, Valentin RENAUD, Aziz BEN JEBALIA
             </p>
           </div>
         </div>
