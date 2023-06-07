@@ -4,7 +4,7 @@ import '../styles/Carousel.css'
 const Carousel = ({ images }) => {
     const carouselRef = useRef(null);
 
-    const SCROLL_AMOUNT = 1035; // Adjust the scroll amount as needed
+    const SCROLL_AMOUNT = 1035; // Adjust the scroll amount as needed 
     
     const scrollLeft = () => {
         carouselRef.current.scrollBy({
