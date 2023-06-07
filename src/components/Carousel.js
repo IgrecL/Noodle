@@ -3,17 +3,19 @@ import '../styles/Carousel.css'
 
 const Carousel = ({ images }) => {
     const carouselRef = useRef(null);
+
+    const SCROLL_AMOUNT = 1035; // Adjust the scroll amount as needed
     
     const scrollLeft = () => {
         carouselRef.current.scrollBy({
-            left: -300,
+            left: -SCROLL_AMOUNT,
             behavior: 'smooth',
         });
     };
     
     const scrollRight = () => {
         carouselRef.current.scrollBy({
-            left: 300, // Adjust the scroll amount as needed
+            left: SCROLL_AMOUNT, 
             behavior: 'smooth',
         });
     };
