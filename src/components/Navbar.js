@@ -45,10 +45,7 @@ return(
     <Searchbar/>
     <Profilepicture/>
     </nav>
-    <div className="searchbar">
-      <Searchbar />
-    </div>
-    </header>)
+   </header>)
 } 
 export default Navbar
 

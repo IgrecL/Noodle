@@ -3,13 +3,12 @@
 
   /* Style de la Searchbar */
 
-  .searchbar {
-    width: 65%;
-  }   
+
 
   .search__main {
-    float: right;
-    width: 40%;
+    position : absolute;
+    right:10%;
+    width: 20%;
   }
 
   .search__search {
