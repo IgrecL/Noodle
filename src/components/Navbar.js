@@ -6,6 +6,7 @@ import '../styles/Link.css'
 import '../styles/Searchbar.css'
 import Searchbar from "./Searchbar";
 import { useEffect, useState } from 'react';
+import Profilepicture from './Profilepicture';
 
 
 function Navbar(){
@@ -42,6 +43,7 @@ return(
     <NavLink className="custom-link" to="/" activeClassName="active">Accueil</NavLink>
     <NavLink className="custom-link " to="/Mylist" activeClassName="active">Ma liste</NavLink>
     <Searchbar/>
+    <Profilepicture/>
     </nav>
     </header>)
 } 
