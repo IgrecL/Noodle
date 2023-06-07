@@ -34,7 +34,7 @@ body {
 
 .overlay {
   position: absolute;
-  top: 80%; /* Position relative de la première catégorie */
+  top: 30%; /* Position relative de la preview */
   left: 0;
   width: 100%;
   height: 100%;
@@ -127,4 +127,6 @@ body {
     transform: scale(1.08);
   }
   
-  
+  .preview {
+    z-index: 40;
+  }
