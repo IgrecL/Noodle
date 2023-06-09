@@ -1,5 +1,7 @@
-import React, { useRef } from 'react';
+import React, { useRef,useState } from 'react';
 import '../styles/Carousel.css'
+import PagePopping from './PagePopping'
+
 
 const Carousel = ({courses}) => {
     const carouselRef = useRef(null);
@@ -19,19 +21,28 @@ const Carousel = ({courses}) => {
             behavior: 'smooth',
         });
     };
-    
+
+    const [showComponent, setShowComponent] = useState(false);
+      
+    const Click = () => {
+        setShowComponent(true);
+        document.body.style.overflow = "hidden";
+
+    };
+      
     return (
         <div className="image-carousel">
             <button className="carousel-button left" onClick={scrollLeft}>
                 &lt;
             </button>
-            <div className="carousel-container" ref={carouselRef}>
+            <div className="carousel-container" ref={carouselRef} onClick={Click}>
                 {courses.map((course, index) => (
                     <div key={index} className="carousel-item">
-                        <div key={index} className="image-wrapper">
+                        <button key={index} className="image-wrapper">
+                            {showComponent && <PagePopping/>}
                             <img src={course.image} alt={`Image ${index}`} className="carousel-image" />
                             <div className="carousel-title">{course.shortTitle}</div>
-                        </div>
+                        </button>
                     </div>
                 ))}
             </div>
