@@ -79,6 +79,7 @@
       z-index: 1;
       border-radius:3%;
       overflow:show;
+      cursor: pointer;
     }
 
 .image-wrapper:not(:hover) {
