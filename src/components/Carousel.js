@@ -39,7 +39,7 @@ const Carousel = ({courses}) => {
                 {courses.map((course, index) => (
                     <div key={index} className="carousel-item">
                         <button key={index} className="image-wrapper">
-                            {showComponent && <PagePopping/>}
+                            {showComponent && <PagePopping courses={courses}/>}
                             <img src={course.image} alt={`Image ${index}`} className="carousel-image" />
                             <div className="carousel-title">{course.shortTitle}</div>
                         </button>
