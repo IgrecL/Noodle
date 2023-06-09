@@ -36,9 +36,6 @@ function Noodle() {
         fetchObjets();
     }, [ues]);
 
-    console.log("Test")
-    console.log(courses);
-
     return (    
         <div>
         <Navbar />

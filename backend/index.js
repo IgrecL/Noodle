@@ -71,6 +71,18 @@ app.get('/courses/:ue', async (req, res) => {
   }
 });
 
+// Search query for search bar
+app.get('/search/:shortTitle', async (req, res) => {
+  try {
+    const shortTitle = req.params.shortTitle;
+    const courses = await Course.find({ shortTitle: shortTitle });
+    res.json(courses);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "L'objet recherché n'existe pas."});
+  }
+});
+
 // Start the server
 const port = 4000;
 app.listen(port, () => {
