@@ -27,8 +27,11 @@ const Carousel = ({courses}) => {
             </button>
             <div className="carousel-container" ref={carouselRef}>
                 {courses.map((course, index) => (
-                    <div key={index} className="image-wrapper">
-                        <img src={course.image} alt={`Image ${index}`} className="carousel-image" />
+                    <div key={index} className="carousel-item">
+                        <div key={index} className="image-wrapper">
+                            <img src={course.image} alt={`Image ${index}`} className="carousel-image" />
+                            <div className="carousel-title">{course.shortTitle}</div>
+                        </div>
                     </div>
                 ))}
             </div>
