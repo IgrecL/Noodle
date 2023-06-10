@@ -51,7 +51,7 @@
 
 .carousel-title {
   position: absolute;
-  bottom: 10px;
+  bottom: 0px;
   left: 50%;
   transform: translateX(-50%);
   background-color: rgba(59, 59, 59, 0.8);
