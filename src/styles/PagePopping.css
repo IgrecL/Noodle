@@ -29,7 +29,7 @@
   
   .image-page {
     width: 100%;
-    border-radius: 1em;
+    border-radius: 0.5em;
     background: linear-gradient(to bottom, rgba(20, 20, 20, 0), rgba(20, 20, 20, 1));
   }
   
