@@ -7,6 +7,7 @@ const PagePopping = ({ course, index }) => {
 
     const handleCloseClick = () => {
         setIsWindowOpen(false);
+        document.body.style.overflow = 'auto';
     };
 
     if (!isWindowOpen) {
