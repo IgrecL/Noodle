@@ -1,26 +1,30 @@
 .page-container {
-    visibility: visible;
-    position: fixed;    
-    background-color: rgba(0, 0, 0, 0.05);
-    z-index: 10;
-    width: 100%;
-    height: 100%;
-    top: 0%;
-    left: 0%;
-    color: white;
-    overflow: scroll;
-  }
+  visibility: visible;
+  position: fixed;    
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 0%;
+  color: white;
+  overflow: scroll;
+  display: flex;
+  justify-content: center;
+}
   
-  .page {
+  .page-pop {
     position: relative;
     display: inline-block;
+    z-index: 10;
+    top: 0%;
     margin-top: 30px;
-    margin-bottom: 30px;
     background-color: rgb(30, 30, 30);
     width: 60%;
     height: auto;
-    border-radius: 1em;
+    border-radius: 0.5em;
     padding-bottom: 30px ;
+    overflow: scroll;
   }
   
   .image-page {
