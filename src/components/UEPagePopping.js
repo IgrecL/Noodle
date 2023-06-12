@@ -3,7 +3,7 @@ import Carousel from './Carousel';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-const UEPagePopping = ({ UE }) => {
+const UEPagePopping = ({ UE, reset }) => {
   const [courses, setCourses] = useState([]);
   const [isWindowOpen, setIsWindowOpen] = useState(true);
   const ues = [
@@ -33,6 +33,7 @@ const UEPagePopping = ({ UE }) => {
   const handleCloseClick = () => {
     setIsWindowOpen(false);
     document.body.style.overflow = 'auto';
+    reset(null);
   };
 
   if (!isWindowOpen) {

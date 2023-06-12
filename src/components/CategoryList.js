@@ -19,7 +19,7 @@ const CategoryList = ({ courses }) => {
         {courses.map((category, index) => (
 		      <div key={index} className="category-item">
             {selectedUE === category[0].UE && (
-              <UEPagePopping UE={category[0].UE} />
+              <UEPagePopping UE={category[0].UE} reset={setSelectedUE} />
             )}
             <li key={index} className='list-element'>
               <div className='category-title' onClick={() => handleClick(category[0].UE)}>

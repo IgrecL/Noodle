@@ -37,7 +37,7 @@ const Carousel = ({ courses }) => {
         {courses.map((course, index) => (
           <div key={index} className="carousel-item">
             {selectedCourseIndex === index && (
-              <PagePopping course={course} index={index} />
+              <PagePopping course={course} index={index} reset = {setSelectedCourseIndex} />
             )}
             <button
               key={index}

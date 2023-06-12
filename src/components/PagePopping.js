@@ -1,18 +1,20 @@
 import '../styles/PagePopping.css';
 import React, { useEffect, useState } from 'react';
 
-const PagePopping = ({ course, index }) => {
+const PagePopping = ({ course, index, reset }) => {
 
     const [isWindowOpen, setIsWindowOpen] = useState(true);
 
     const handleCloseClick = () => {
         setIsWindowOpen(false);
         document.body.style.overflow = 'auto';
+        reset(null);
     };
 
     if (!isWindowOpen) {
       return null;
     }
+
 
     return (
         <div className='page-container'>
