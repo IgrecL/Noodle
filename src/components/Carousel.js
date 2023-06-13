@@ -30,7 +30,14 @@ const Carousel = ({courses}) => {
                     <div key={index} className="carousel-item">
                         <div key={index} className="image-wrapper">
                             <img src={course.image} alt={`Image ${index}`} className="carousel-image" />
-                            <div className="carousel-title">{course.shortTitle}</div>
+                            <div className="carousel-title">
+                                {course.shortTitle}
+                                <button className="list-button" >+</button>
+                                <div className='list-rectangle'>Ajouter le cours à ma liste</div>
+                                <button className="arrow-button" >˅</button>
+                                <div className='list-know'>En savoir plus</div>
+
+                                </div>
                         </div>
                     </div>
                 ))}
