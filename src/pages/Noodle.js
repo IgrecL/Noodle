@@ -7,7 +7,7 @@ import '../styles/Navbar.css'
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import Trending from '../components/Trending'
+import Trending from '../components/Trending'   
 
 function Noodle() {
 

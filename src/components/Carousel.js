@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
 import '../styles/Carousel.css';
+import '../styles/title-buttons.css';
 import PagePopping from './PagePopping';
 
 const Carousel = ({ courses }) => {
