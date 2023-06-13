@@ -1,8 +1,9 @@
-import React, { useRef } from 'react';
-import '../styles/Carousel.css'
+import React, { useRef, useState } from 'react';
+import '../styles/Carousel.css';
+import PagePopping from './PagePopping';
 
-const Carousel = ({courses}) => {
-    const carouselRef = useRef(null);
+const Carousel = ({ courses }) => {
+  const carouselRef = useRef(null);
 
     const SCROLL_AMOUNT = 1035; // Adjust the scroll amount as needed 
     
@@ -30,14 +31,7 @@ const Carousel = ({courses}) => {
                     <div key={index} className="carousel-item">
                         <div key={index} className="image-wrapper">
                             <img src={course.image} alt={`Image ${index}`} className="carousel-image" />
-                            <div className="carousel-title">
-                                {course.shortTitle}
-                                <button className="list-button" >+</button>
-                                <div className='list-rectangle'>Ajouter le cours à ma liste</div>
-                                <button className="arrow-button" >˅</button>
-                                <div className='list-know'>En savoir plus</div>
-
-                                </div>
+                            <div className="carousel-title">{course.shortTitle}</div>
                         </div>
                     </div>
                 ))}
@@ -48,5 +42,5 @@ const Carousel = ({courses}) => {
         </div>
     );
 };
-        
+
 export default Carousel;

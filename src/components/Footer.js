@@ -14,23 +14,23 @@ const Footer = () => {
             <div className="row">
               <div className="col-md-6">
                 <p>
-                  <a href="https://www.facebook.com/noodle" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.facebook.com/tcinsalyon/?locale=fr_FR" target="_blank" rel="noopener noreferrer">
                       <img src={facebookIcon} alt="Facebook" style={{ height: '24px' }} />
                   </a>
-                  <a href="https://www.twitter.com/noodle" target="_blank" rel="noopener noreferrer">
+                  <a href="https://twitter.com/tc_insalyon?lang=en" target="_blank" rel="noopener noreferrer">
                       <img src={twitterIcon} alt="twitter" style={{ height: '24px'}} />
                   </a>
-                  <a href="https://www.instagram.com/noodle" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.instagram.com/tcinsalyon/?hl=en" target="_blank" rel="noopener noreferrer">
                       <img src={instagramIcon} alt="instagram" style={{ height: '24px'}} />
                   </a>
-                  <a href="https://www.youtube.com/noodle" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.youtube.com/channel/UC263-HvGo9n2bTLfWW_oygw" target="_blank" rel="noopener noreferrer">
                       <img src={youtubeIcon} alt="youtube" style={{ height: '24px'}} />
                   </a>
                   <a href="https://github.com/IgrecL/noodle.git" target="_blank" rel="noopener noreferrer">
                       <img src={githubIcon} alt="github" style={{ height: '24px'}} />
                   </a>
                 </p> 
-                <p>Email : contact@noodle.com</p>
+                <p>Email : contact.noodle0@gmail.com</p>
               </div>
               <div className="col-md-6">
                 <p>
