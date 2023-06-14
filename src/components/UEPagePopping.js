@@ -7,9 +7,18 @@ const UEPagePopping = ({ UE, reset }) => {
   const [courses, setCourses] = useState([]);
   const [isWindowOpen, setIsWindowOpen] = useState(true);
   const ues = [
+    'Architecture TCP-IP',
+    'Systèmes de Communication 1',
+    'Algorithmique et programmation',
+    'Pratique et Projets 1',
+    'Pratique et Projets 2',
     'Systèmes et Services Informatiques',
-    'Architectures LAN et WAN'
-  ];
+    'Architectures LAN et WAN',
+    'Systèmes de Communication 2',
+    'Pratique et Projets 3',
+    'Projet de recherche et d’ingénierie', 
+    'Humanités'
+  ]; 
 
   useEffect(() => {
     const fetchObjets = async () => {

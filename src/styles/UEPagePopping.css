@@ -29,5 +29,9 @@
 
 .UEcategory-title {
   font-size: 24px;
-  margin-bottom: 20px;
+  margin-bottom: -100px;
+}
+
+.list-element {
+  max-width: 100%; /* Limit the width of the Carousel component */
 }

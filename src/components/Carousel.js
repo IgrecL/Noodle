@@ -70,7 +70,7 @@ const Carousel = ({ courses }) => {
             {selectedCourseIndex === index && (
               <PagePopping course={course} index={index} reset={setSelectedCourseIndex} />
             )}
-            <button key={index} className="image-wrapper">
+            <a key={index} className="image-wrapper" href='https://en.wikipedia.org/wiki/React_(software)' target="_blank" rel="noreferrer">
               <img src={course.image} alt={`Image ${index}`} className="carousel-image" />
               <div className="carousel-title">
                 {course.shortTitle}
@@ -81,7 +81,7 @@ const Carousel = ({ courses }) => {
                 </button>
                 <div className="list-know">En savoir plus</div>
               </div>
-            </button>
+            </a>
           </div>
         ))}
       </div>
