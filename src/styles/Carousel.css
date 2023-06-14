@@ -98,28 +98,27 @@
 }
 
 .carousel-button-left {
-  position:absolute;
-  right:99.5%;
-  height: 100px;
-  border: 0px;
+  position: absolute;
+  margin-top: 170px;
+  left: 5px;
+  border: 0;
   font-size: 40px;
   color: rgb(255, 255, 255);
   opacity: 10%;
-  background-color: rgb(0, 0, 0, 0);
-  z-index:4;
-
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 4;
 }
 
 .carousel-button-right {
-  position:absolute;
-  left:99.5%;
-  height: 100px;
-  border: 0px;
+  position: absolute;
+  margin-top: -90px;;
+  right: 0;
+  border: 0;
   font-size: 40px;
   color: rgb(255, 255, 255);
   opacity: 10%;
-  background-color: rgb(0, 0, 0, 0);
-  z-index:4;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 4;
 }
 
 
