@@ -47,7 +47,6 @@ const Carousel = ({ courses }) => {
     const handleOverflow = () => {
       const isOverflowing = carouselContainer.scrollWidth > window.innerWidth;
       setIsOverflow(isOverflowing);
-
     };
 
     handleOverflow();
@@ -59,13 +58,13 @@ const Carousel = ({ courses }) => {
 
   return (
     <div className="image-carousel">
-      <button className="carousel-button left" onClick={scrollLeft}>
-        &lt;
-      </button>
       <div
         className={`carousel-container${isOverflow ? ' overflow-scroll' : ''}`}
         ref={carouselRef}
       >
+              <button className="carousel-button-left" onClick={scrollLeft}>
+        &lt;
+      </button>
         {courses.map((course, index) => (
           <div key={index} className="carousel-item">
             {selectedCourseIndex === index && (
@@ -85,10 +84,11 @@ const Carousel = ({ courses }) => {
             </button>
           </div>
         ))}
-      </div>
-      <button className="carousel-button right" onClick={scrollRight}>
+              <button className="carousel-button-right" onClick={scrollRight}>
         &gt;
       </button>
+      </div>
+
     </div>
   );
 };
