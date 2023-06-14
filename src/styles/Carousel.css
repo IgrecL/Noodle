@@ -8,15 +8,16 @@
     top: 80px;
     margin-bottom: 25px;
     margin-top: 20px;
-    margin-left: 60px;
     height: 240px;
     display: flex;
     align-items: center;
-    overflow-x: scroll;
-    left:-70px;
     scrollbar-width: none; /* Hide scrollbar for Firefox */
     -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
     
+}
+
+.carousel-container.overflow-scroll {
+  overflow-x: scroll;
 }
 
 .carousel-container::-webkit-scrollbar {
@@ -93,7 +94,6 @@
 
 .carousel-button {
   position:relative;
-  left:-30px;
   top:75px;
   width: 100px;
   height: 100px;
