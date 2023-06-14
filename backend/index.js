@@ -24,6 +24,9 @@ mongoose
 const CourseModel = require('./models/Course');
 const Course = require('./models/Course');
 
+const LinkModel = require('./models/Link');
+const Link = require('./models/Link');
+
 // Define a route to retrieve all items from the database
 app.get('/courses', (req, res) => {
   CourseModel.find({})
@@ -80,6 +83,38 @@ app.get('/search/:shortTitle', async (req, res) => {
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: "L'objet recherché n'existe pas."});
+  }
+});
+
+// Add new links
+app.post('/links', async (req, res) => {
+  try {
+    const { name, link, main, shortTitle } = req.body;
+
+    const newLink = new LinkModel({
+      name,
+      link,
+      main,
+      shortTitle,
+    });
+
+    await newLink.save();
+    res.send('Item saved successfully');
+  } catch (error) {
+    console.error('Error saving item:', error);
+    res.status(500).send('Error saving item');
+  }
+});
+
+// Search links by subject
+app.get('/links/:subject', async (req, res) => {
+  try {
+    const subject = req.params.subject;
+    const links = await Link.find({ shortTitle: subject });
+    res.json(links);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Une erreur est survenue lors de la récupération des objets.' });
   }
 });
 
