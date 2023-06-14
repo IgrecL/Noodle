@@ -14,12 +14,15 @@ const PagePopping = ({ course, index, reset }) => {
     if (!isWindowOpen) {
       return null;
     }
-
+    
+    const imageRef = {
+        backgroundImage: `url(${course.image})`,
+      };
 
     return (
         <div className='page-container'>
             <div className='page-pop'> 
-            <img src={course.image} alt={`img ${index}`} className='image-page'></img>
+            <div style={imageRef} className='image-page'></div>
             <h1 className='title-pop'>{course.title}</h1>
 			<div className='buttons-pop'>
 				<a href='https://docs.google.com/presentation/d/1YUjNjfnHAnkmmquXGP7QWRpZiAj8vzNtkU2Ud4TGg-w/edit#slide=id.p' target="_blank" rel="noreferrer">
