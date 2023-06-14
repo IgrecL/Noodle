@@ -12,7 +12,7 @@
     height: 240px;
     display: flex;
     align-items: center;
-    overflow-x: scroll show;
+    overflow-x: scroll;
     left:-70px;
     scrollbar-width: none; /* Hide scrollbar for Firefox */
     -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
