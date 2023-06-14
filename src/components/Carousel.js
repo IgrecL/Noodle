@@ -69,7 +69,6 @@ const Carousel = ({ courses }) => {
                     linksArray.push(response.data);
                 }
 
-                console.log(linksArray);
                 setCategoryLinks(linksArray);
             } catch (error) {
                 /* console.error(error); */
@@ -88,7 +87,7 @@ const Carousel = ({ courses }) => {
             {courses.map((course, index) => (
                 <div key={index} className="carousel-item">
                 {selectedCourseIndex === index && (
-                    <PagePopping course={course} index={index} reset={setSelectedCourseIndex} />
+                    <PagePopping course={course} reset={setSelectedCourseIndex} />
                     )}
                     <button key={index} className="image-wrapper">
 

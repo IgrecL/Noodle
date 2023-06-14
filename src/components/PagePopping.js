@@ -1,7 +1,7 @@
 import '../styles/PagePopping.css';
 import React, { useEffect, useState } from 'react';
 
-const PagePopping = ({ course, index, reset }) => {
+const PagePopping = ({ course, reset }) => {
 
     const [isWindowOpen, setIsWindowOpen] = useState(true);
 
