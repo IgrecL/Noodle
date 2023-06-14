@@ -81,7 +81,7 @@ const Carousel = ({ courses }) => {
 
     return (
         <div className="image-carousel">
-            <button className="carousel-button left" onClick={scrollLeft}>
+            <button className="carousel-button-left" onClick={scrollLeft}>
             &lt;
             </button>
             <div className={`carousel-container${isOverflow ? ' overflow-scroll' : ''}`} ref={carouselRef} >
@@ -127,7 +127,7 @@ const Carousel = ({ courses }) => {
                 </div>
                 ))}
             </div>
-        <button className="carousel-button right" onClick={scrollRight}>
+        <button className="carousel-button-right" onClick={scrollRight}>
             &gt;
         </button>
         </div>
