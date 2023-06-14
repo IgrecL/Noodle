@@ -20,8 +20,8 @@ const PagePopping = ({ course, index, reset }) => {
         <div className='page-container'>
             <div className='page-pop'> 
             <img src={course.image} alt={`img ${index}`} className='image-page'></img>
-            <h1>{course.title}</h1>
-			<div className='buttons'>
+            <h1 className='title-pop'>{course.title}</h1>
+			<div className='buttons-pop'>
 				<a href='https://docs.google.com/presentation/d/1YUjNjfnHAnkmmquXGP7QWRpZiAj8vzNtkU2Ud4TGg-w/edit#slide=id.p' target="_blank" rel="noreferrer">
 					<button className='button1'>▶ Lecture</button>
 				</a>
