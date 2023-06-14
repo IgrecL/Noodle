@@ -43,7 +43,6 @@ const Carousel = ({ courses }) => {
             <button
               key={index}
               className="image-wrapper"
-              onClick={() => handleClick(index)}
             >
               <img
                 src={course.image}
@@ -54,7 +53,12 @@ const Carousel = ({ courses }) => {
               {course.shortTitle}
               <button className='list-button'>+</button>
               <div className='list-rectangle'>Ajouter à ma liste</div>
-              <button className='arrow-button'>˅</button>
+              <button 
+                className='arrow-button'
+                onClick={() => handleClick(index)}
+              >
+                ˅
+              </button>
               <div className='list-know'>En savoir plus</div>
               </div>
             </button>
