@@ -82,7 +82,6 @@
       z-index: 1;
       border-radius: 0.5em;
       overflow: show;
-      cursor: pointer;
     }
 
 .image-wrapper:not(:hover) {
