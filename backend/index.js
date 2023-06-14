@@ -89,9 +89,10 @@ app.get('/search/:shortTitle', async (req, res) => {
 // Add new links
 app.post('/links', async (req, res) => {
   try {
-    const { link, main, shortTitle } = req.body;
+    const { name, link, main, shortTitle } = req.body;
 
     const newLink = new LinkModel({
+      name,
       link,
       main,
       shortTitle,
