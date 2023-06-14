@@ -41,9 +41,9 @@ const UEPagePopping = ({ UE, reset }) => {
   }
 
   return (
-    <div className='page-container'>
-      <div className='page'>
-        <h2 className='category-title'>{UE}</h2>
+    <div className='UEpage-container'>
+      <div className='UEpage'>
+        <h2 className='UEcategory-title'>{UE}</h2>
         <button className='close' onClick={handleCloseClick}>✖</button>
         {courses.map((category, index) => {
           if (category[0].UE === UE) {

@@ -29,7 +29,7 @@ const PagePopping = ({ course, index, reset }) => {
 					<button className='button2'>+</button>
 				</a>
 			</div>
-            <p>{course.description}</p>
+            <p className='description-pop'>{course.description}</p>
             <button className='close' onClick={handleCloseClick}>✖</button>
             </div>
         </div>

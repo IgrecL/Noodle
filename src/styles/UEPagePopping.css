@@ -1,4 +1,4 @@
-.page-container {
+.UEpage-container {
   visibility: visible;
   position: fixed;
   background-color: rgba(0, 0, 0, 0.05);
@@ -13,7 +13,7 @@
   justify-content: center;
 }
 
-.page {
+.UEpage {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -27,7 +27,7 @@
   padding: 30px;
 }
 
-.category-title {
+.UEcategory-title {
   font-size: 24px;
   margin-bottom: 20px;
 }
