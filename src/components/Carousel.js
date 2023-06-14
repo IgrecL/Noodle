@@ -45,11 +45,9 @@ const Carousel = ({ courses }) => {
   useEffect(() => {
     const carouselContainer = carouselRef.current;
     const handleOverflow = () => {
-      const isOverflowing = carouselContainer.scrollWidth > carouselContainer.offsetWidth;
+      const isOverflowing = carouselContainer.scrollWidth > window.innerWidth;
       setIsOverflow(isOverflowing);
-      if (!isOverflowing) {
-        carouselContainer.scrollLeft = 0;
-      }
+
     };
 
     handleOverflow();
