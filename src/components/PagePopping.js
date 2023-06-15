@@ -23,6 +23,8 @@ const PagePopping = ({ course, reset }) => {
         <div className='page-container'>
             <div className='page-pop'> 
             <div style={imageRef} className='image-page'>
+                <div className='fade-image-page'/>
+                <h1 className='title-pop'>{course.title}</h1>
                 <div className='buttons-pop'>
 				    <a href='https://docs.google.com/presentation/d/1YUjNjfnHAnkmmquXGP7QWRpZiAj8vzNtkU2Ud4TGg-w/edit#slide=id.p' target="_blank" rel="noreferrer">
 					    <button className='button1'>▶ Lecture</button>
@@ -32,7 +34,6 @@ const PagePopping = ({ course, reset }) => {
 				    </a>
 			    </div>
             </div>
-            <h1 className='title-pop'>{course.title}</h1>
             <p className='description-pop'>{course.description}</p>
             <button className='close' onClick={handleCloseClick}>✖</button>
             </div>

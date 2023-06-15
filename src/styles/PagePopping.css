@@ -31,18 +31,34 @@
   .image-page {
     width: 100%;
     height: 70%;
+    display: flex;
     background-size: cover;
     border-radius: 0.5em;
   }
 
+  .fade-image-page {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Ajustez la hauteur du dégradé selon vos préférences */
+    background-image: linear-gradient(to bottom, rgba(30, 30, 30, 0), rgba(30, 30, 30, 1));
+  }
+
   .title-pop {
+    position: absolute;
+    align-self: flex-end;
     margin-left: 50px;
+    margin-right: 35%;
+    margin-bottom: 140px;
+    font-size: 50px;
   }
 
   .buttons-pop {
-    display: flex;
+    position: absolute;
     align-self: flex-end;
     margin-left: 50px;
+    margin-bottom: 70px;
   }
 
   .description-pop {
