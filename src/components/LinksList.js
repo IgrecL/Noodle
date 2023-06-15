@@ -12,7 +12,7 @@ const LinksList = ({ links }) => {
                     {links
                         .map((linkItem, index) => (
                             <div className="linkItem" >
-                                <a className="linkLink" href={linkItem.link}>
+                                <a className="linkLink" href={linkItem.link} target="_blank" rel="noreferrer">
                                     <img src={pdfImage} alt="logo pdf" style={{ height: '18px'}} />
                                     <span classname='linkName'>{linkItem.name}</span>
                                 </a>

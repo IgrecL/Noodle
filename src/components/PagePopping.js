@@ -37,25 +37,27 @@ const PagePopping = ({ course, reset }) => {
 
     return (
         <div className='page-container'>
-            <div className='page-pop'> 
-            <div style={imageRef} className='image-page'>
-                <div className='fade-image-page'/>
-                <h1 className='title-pop'>{course.title}</h1>
-                <div className='buttons-pop'>
-				    <a href='https://docs.google.com/presentation/d/1YUjNjfnHAnkmmquXGP7QWRpZiAj8vzNtkU2Ud4TGg-w/edit#slide=id.p' target="_blank" rel="noreferrer">
-					    <button className='button1'>▶ Lecture</button>
-				    </a>
-				    <a href='https://en.wikipedia.org/wiki/React_(software)' target="_blank" rel="noreferrer">
-					    <button className='button2'>+</button>
-				    </a>
-			    </div>
-            </div>
-            <p className='description-pop'>{course.description}</p>
-            <div className='linksList-pop'>
-                <LinksList links={linksList} />
-            </div>
-            <button className='close' onClick={handleCloseClick}>✖</button>
-            </div>
+            {linksList[0] ? (
+                <div className='page-pop'> 
+                <div style={imageRef} className='image-page'>
+                    <div className='fade-image-page'/>
+                    <h1 className='title-pop'>{course.title}</h1>
+                        <div className='buttons-pop'>
+                            <a href={linksList[0].link} target="_blank" rel="noreferrer">
+                                <button className='button1'>▶ Lecture</button>
+                            </a>
+                            <a href='https://en.wikipedia.org/wiki/React_(software)' target="_blank" rel="noreferrer">
+                                <button className='button2'>+</button>
+                            </a>
+                        </div>
+                </div>
+                <p className='description-pop'>{course.description}</p>
+                <div className='linksList-pop'>
+                    <LinksList links={linksList} />
+                </div>
+                <button className='close' onClick={handleCloseClick}>✖</button>
+                </div>
+            ) : ("")}
         </div>
     );
 }
