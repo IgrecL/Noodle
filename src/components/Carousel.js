@@ -8,8 +8,7 @@ const Carousel = ({ courses }) => {
     const carouselRef = useRef(null);
     const [selectedCourseIndex, setSelectedCourseIndex] = useState(null);
     const [isOverflow, setIsOverflow] = useState(false);
-    const [categoryLinks, setCategoryLinks] = useState([]);
-    
+    const [categoryLinks, setCategoryLinks] = useState([]);  
     const SCROLL_AMOUNT = 1035; // Adjust the scroll amount as needed
     
     const scrollLeft = () => {

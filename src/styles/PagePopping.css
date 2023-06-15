@@ -1,5 +1,5 @@
 .page-container {
-  visibility: visible;
+  opacity:1;
   position: fixed;    
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 10;
@@ -14,7 +14,8 @@
   scrollbar-width: none; /* Hide scrollbar for Firefox */
   -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
 }
-  
+
+
   .page-pop {
     position: relative;
     display: inline-block;
