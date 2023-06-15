@@ -1,9 +1,23 @@
 import '../styles/PagePopping.css';
 import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import LinksList from './LinksList';
 
 const PagePopping = ({ course, reset }) => {
 
     const [isWindowOpen, setIsWindowOpen] = useState(true);
+    const [linksList, setLinksList] = useState({});
+
+	useEffect(() => {
+		axios.get(`http://localhost:4000/links/${course.shortTitle}`)
+		.then((response) => {
+			const linksData = response.data;
+			setLinksList(linksData);
+		})
+		.catch((error) => {
+			console.error(error);
+		});
+	}, []);
 
     const handleCloseClick = () => {
         setIsWindowOpen(false);
@@ -17,7 +31,9 @@ const PagePopping = ({ course, reset }) => {
     
     const imageRef = {
         backgroundImage: `url(${course.image})`,
-      };
+    };
+
+    console.log("linkslist "+linksList)
 
     return (
         <div className='page-container'>
@@ -35,6 +51,9 @@ const PagePopping = ({ course, reset }) => {
 			    </div>
             </div>
             <p className='description-pop'>{course.description}</p>
+            <div className='linksList-pop'>
+                <LinksList links={linksList} />
+            </div>
             <button className='close' onClick={handleCloseClick}>✖</button>
             </div>
         </div>

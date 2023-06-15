@@ -81,3 +81,8 @@
     box-shadow: 0 0 4em black;  
     cursor: pointer;
   }
+
+  .linksList-pop {
+    margin-top: 30px;
+    margin-left: 50px;
+  }
