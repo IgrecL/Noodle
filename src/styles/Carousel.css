@@ -6,14 +6,14 @@
 
 .carousel-container {
     position: relative;
-    top: 85px;
+    top: 80px;
     margin-bottom: 25px;
     margin-top: 20px;
     margin-right:40px;
     margin-left: 40px;
     height: 240px;
     display: flex;
-    overflow-x: hidden; /* to avoid the overflow in the UEPagePopping carousel */
+    overflow-x: show; /* to avoid the overflow in the UEPagePopping carousel */
     align-items: center;
     scrollbar-width: none; /* Hide scrollbar for Firefox */
     
@@ -42,7 +42,6 @@
   width: 250px;
   height: 150px;
   border: 0px solid #ccc;
-  display: flex;
   background-color: white;
   align-items: center;
   border-radius: 0.5em;
@@ -141,6 +140,3 @@
   opacity: 100%;
 }
 
-.padding-carousel {
-  padding: 27px
-}

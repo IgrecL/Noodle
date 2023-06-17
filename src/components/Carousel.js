@@ -4,7 +4,7 @@ import '../styles/title-buttons.css';
 import PagePopping from './PagePopping';
 import axios from 'axios';
 
-const Carousel = ({ courses, onCourseClick, setChosenCourse, cas }) => {
+const Carousel = ({ courses, onCourseClick, setChosenCourse, cas, context }) => {
     const carouselRef = useRef(null);
     const [selectedCourseIndex, setSelectedCourseIndex] = useState(null);
     const [isOverflow, setIsOverflow] = useState(false);
@@ -85,14 +85,18 @@ const Carousel = ({ courses, onCourseClick, setChosenCourse, cas }) => {
         fetchObjets();
     }, [courses]);
 
+
+    let containerClassName = 'carousel-container';
+  
+    if (context === 'ue') {
+        containerClassName += ' uepagepopping';}
+
     return (
         <div className="image-carousel">
             <button className="carousel-button-left" onClick={scrollLeft}>
                 &lt;
             </button>
-            <div className={`carousel-container${isOverflow ? ' overflow-scroll' : ''}`} ref={carouselRef}>
-                <div className='padding-carousel'>
-                </div>
+            <div className={`${containerClassName}${isOverflow ? ' overflow-scroll' : ''}`} ref={carouselRef}>
                 {courses.map((course, index) => (
                     <div key={index} className="carousel-item">
                         {selectedCourseIndex === index && (
@@ -133,8 +137,7 @@ const Carousel = ({ courses, onCourseClick, setChosenCourse, cas }) => {
                         </button>
                     </div>
                 ))}
-                <div className='padding-carousel'></div>
-            </div>
+                </div>
             <button className="carousel-button-right" onClick={scrollRight}>
                 &gt;
             </button>

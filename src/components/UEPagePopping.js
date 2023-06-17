@@ -72,7 +72,7 @@ const UEPagePopping = ({ UE, reset }) => {
           if (category[0].UE === UE) {
             return (
               <li key={index} className='list-element'>
-                <Carousel courses={category} onCourseClick={handleCourseClick} setChosenCourse={selectedCourseIndex} cas={1}/>
+                <Carousel courses={category} onCourseClick={handleCourseClick} setChosenCourse={selectedCourseIndex} cas={1} context='ue'/>
               </li>
             );
           } else {
