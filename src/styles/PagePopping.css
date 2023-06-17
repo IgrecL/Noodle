@@ -1,5 +1,5 @@
 .page-container {
-  visibility: visible;
+  opacity:1;
   position: fixed;    
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 10;
@@ -14,7 +14,8 @@
   scrollbar-width: none; /* Hide scrollbar for Firefox */
   -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
 }
-  
+
+
   .page-pop {
     position: relative;
     display: inline-block;
@@ -80,4 +81,9 @@
     border-radius: 100%;
     box-shadow: 0 0 4em black;  
     cursor: pointer;
+  }
+
+  .linksList-pop {
+    margin-top: 30px;
+    margin-left: 50px;
   }

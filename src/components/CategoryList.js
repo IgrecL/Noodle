@@ -8,7 +8,6 @@ const CategoryList = ({ courses }) => {
   const [selectedUE, setSelectedUE] = useState(null);
 
   const handleClick = (UE) => {
-    console.log('handleClick called with UE:', UE);
     setSelectedUE(UE);
     document.body.style.overflow = 'hidden';
   };

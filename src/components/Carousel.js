@@ -78,7 +78,7 @@ const Carousel = ({ courses, onCourseClick, setChosenCourse, cas }) => {
 
                 setCategoryLinks(linksArray);
             } catch (error) {
-                /* console.error(error); */
+                console.error(error);
             }
         };
 
@@ -106,7 +106,7 @@ const Carousel = ({ courses, onCourseClick, setChosenCourse, cas }) => {
                                             {categoryLinks[index]
                                                 .filter(linkItem => linkItem.main) // Filtrer l'item où item.main = true
                                                 .map((linkItem, itemIndex) => (
-                                                    <a href={linkItem.link}>
+                                                    <a href={linkItem.link} target="_blank" rel="noreferrer">
                                                         <img src={course.image} alt={`Image ${index}`} className="carousel-image" />
                                                     </a>
                                                 ))}

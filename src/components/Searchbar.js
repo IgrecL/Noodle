@@ -35,7 +35,7 @@ function Searchbar() {
   useEffect(() => {
     const handleKeyPress = (event) => {
       if (event.key === 'Enter') {
-        const inputValue = inputValueRef.current;
+        const inputValue = inputValueRef.current.toUpperCase();
         axios.get(`http://localhost:4000/search/${inputValue}`)
           .then((response) => {
             // Handle the response data
