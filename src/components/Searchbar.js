@@ -11,13 +11,14 @@ function Searchbar() {
   const [inputValue, setInputValue] = useState('');
   const inputValueRef = useRef('');
   const [selectedCourse, setSelectedCourse] = useState(null);
+  const searchContainerRef = useRef(null);
 
   const toggleSearchBar = () => {
     if (!expanded) {
       setExpanded(true);
-      document.body.style.overflow = 'hidden';
     } else {
       clearInput();
+      
     }
   };
 
@@ -30,6 +31,12 @@ function Searchbar() {
   const handleInputChange = (e) => {
     inputValueRef.current = e.target.value;
     setInputValue(e.target.value);
+  };
+
+  const handleOutsideClick = (event) => {
+    if (searchContainerRef.current && !searchContainerRef.current.contains(event.target)) {
+      clearInput();
+    }
   };
 
   useEffect(() => {
@@ -46,19 +53,30 @@ function Searchbar() {
             // Handle the error
             console.error(error);
             setSelectedCourse(null);
+            document.body.style.overflow = 'auto';
           });
       }
     };
 
     document.addEventListener('keydown', handleKeyPress);
+    document.addEventListener('mousedown', handleOutsideClick); // Add event listener for outside click
 
     return () => {
       document.removeEventListener('keydown', handleKeyPress);
+      document.removeEventListener('mousedown', handleOutsideClick); // Remove event listener on cleanup
     };
   }, []);
 
+  useEffect(() => {
+    if (selectedCourse) {
+      document.body.style.overflow = 'hidden'; // Set overflow to hidden
+    } else {
+      document.body.style.overflow = 'auto'; // Set overflow to auto
+    }
+  }, [selectedCourse]);
+
   return (
-    <div className="search__main">
+    <div className="search__main" ref={searchContainerRef}>
       <div className={`search__search ${expanded ? 'expanded' : ''}`}>
         <input
           className="search__input"
