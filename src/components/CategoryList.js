@@ -28,7 +28,7 @@ const CategoryList = ({ courses }) => {
                   text2='Tout explorer'
                 />
               </div>
-              <Carousel courses={category} />
+              <Carousel courses={category} cas={0} />
 			      </li>
           </div>		  
         ))}

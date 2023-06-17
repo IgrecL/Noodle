@@ -15,6 +15,7 @@ function Searchbar() {
   const toggleSearchBar = () => {
     if (!expanded) {
       setExpanded(true);
+      document.body.style.overflow = 'hidden';
     } else {
       clearInput();
     }
@@ -71,7 +72,7 @@ function Searchbar() {
       </div>
       <img className={`search__loupe ${expanded ? 'expanded' : ''}`} src={magnifyingGlass} alt="loupe" onClick={toggleSearchBar} />
       {selectedCourse && (
-        <PagePopping course={selectedCourse} reset={clearInput} />
+        <PagePopping course={selectedCourse} reset={clearInput} cas2={0}/>
       )}
     </div>
   );

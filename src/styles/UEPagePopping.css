@@ -25,6 +25,7 @@
   height: auto;
   border-radius: 1em;
   padding: 30px;
+  padding-bottom: 65px;
 }
 
 .UEcategory-title {
@@ -34,4 +35,24 @@
 
 .list-element {
   max-width: 100%; /* Limit the width of the Carousel component */
+}
+
+.close-button{
+  position: absolute; 
+  top: 0;         /* place le bouton en haut pour positon absolute ou fixed */
+  right: 0;       /* pareil mais à droite */
+  margin: 15px; 
+  width: 40px;
+  height: 40px;
+  z-index: 0;  
+  background-color: rgb(30, 30, 30);
+  border: none;
+  color: white;
+  border-radius: 100%;
+  box-shadow: 0 0 4em black;  
+  cursor: pointer;
+}
+
+.close.hide {
+  opacity: 0%;
 }

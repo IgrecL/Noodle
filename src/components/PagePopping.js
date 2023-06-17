@@ -1,19 +1,15 @@
 import '../styles/PagePopping.css';
 import React, { useEffect, useState } from 'react';
 
-const PagePopping = ({ course, reset }) => {
+const PagePopping = ({ course, reset, cas2}) => {
 
-    const [isWindowOpen, setIsWindowOpen] = useState(true);
 
     const handleCloseClick = () => {
-        setIsWindowOpen(false);
-        document.body.style.overflow = 'auto';
+        if (cas2 == 0) {
+            document.body.style.overflow = 'auto';
+        }
         reset(null);
     };
-
-    if (!isWindowOpen) {
-      return null;
-    }
     
     const imageRef = {
         backgroundImage: `url(${course.image})`,
