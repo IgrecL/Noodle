@@ -1,6 +1,6 @@
 import '../styles/UEPagePopping.css';
 import Carousel from './Carousel';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import axios from 'axios';
 
 const UEPagePopping = ({ UE, reset }) => {
@@ -22,6 +22,8 @@ const UEPagePopping = ({ UE, reset }) => {
     'Projet de recherche et d’ingénierie',
     'Humanités'
   ];
+
+  const pageContainerRef = useRef(null);
 
   useEffect(() => {
     const fetchObjets = async () => {
@@ -57,31 +59,50 @@ const UEPagePopping = ({ UE, reset }) => {
     console.log('a77');
   };
 
-  if (!isWindowOpen) {
-    return null;
-  }
+  const handleOutsideClick = (event) => {
+    if (
+      pageContainerRef.current &&
+      !pageContainerRef.current.contains(event.target)
+    ) {
+      handleCloseClick();
+    }
+  };
+
+  useEffect(() => {
+    if (isWindowOpen) {
+      document.addEventListener('mousedown', handleOutsideClick);
+    } else {
+      document.removeEventListener('mousedown', handleOutsideClick);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleOutsideClick);
+    };
+  }, [isWindowOpen]);
 
   return (
     <div className='UEpage-container'>
-      <div className='UEpage'>
-        <h2 className='UEcategory-title'>{UE}</h2>
-        <button className="close-button" onClick={handleCloseClick}>
-          ✖
-        </button>
-        {courses.map((category, index) => {
-          if (category[0].UE === UE) {
-            return (
-              <li key={index} className='list-element'>
-                <Carousel courses={category} onCourseClick={handleCourseClick} setChosenCourse={selectedCourseIndex} cas={1} context='ue'/>
-              </li>
-            );
-          } else {
-            return null;
-          }
-        })}
-      </div>
+      {isWindowOpen && (
+        <div ref={pageContainerRef} className='UEpage'>
+          <h2 className='UEcategory-title'>{UE}</h2>
+          <button className="close-button" onClick={handleCloseClick}>
+            ✖
+          </button>
+          {courses.map((category, index) => {
+            if (category[0].UE === UE) {
+              return (
+                <li key={index} className='list-element'>
+                  <Carousel courses={category} onCourseClick={handleCourseClick} setChosenCourse={selectedCourseIndex} cas={1} context='ue'/>
+                </li>
+              );
+            } else {
+              return null;
+            }
+          })}
+        </div>
+      )}
     </div>
   );
 };
 
-export default UEPagePopping;
+export default UEPagePopping

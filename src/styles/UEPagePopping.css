@@ -62,13 +62,18 @@
   top: 80px;
   margin-bottom: 25px;
   margin-top: 20px;
-  margin-right:40px;
-  margin-left: 40px;
-  height: 240px;
+  height: max;
   display: flex;
-  overflow-x: hidden; /* to avoid the overflow in the UEPagePopping carousel */
+  overflow-x: show; 
   align-items: center;
   scrollbar-width: none; /* Hide scrollbar for Firefox */
+  padding-left:5%;
+  padding-right:8%;
+  left:-5%;  
   
-  
+}
+
+.carousel-container.uepagepopping.overflow-scroll {
+
+  overflow-x:scroll;
 }
