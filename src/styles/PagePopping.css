@@ -63,19 +63,20 @@
   }
 
   .presentation-pop {
-    margin-top: 10px;
     display: flex;
     justify-content: flex-start;
   }
 
   .description-pop {
     text-align: justify;
-    margin-left: 40px;
-    width: 60%;
+    margin-left: 50px;
+    width: 65%;
+    border-right: 1px solid rgba(255, 255, 255, 0.3) ;
+    padding-right: 30px;
   }
 
   .enseignant-pop {
-    margin-left: 60px;
+    margin-left: 30px;
     width: 30%;
   }
   

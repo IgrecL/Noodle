@@ -8,7 +8,7 @@ const LinksList = ({ links }) => {
 		<>
             {links[0] ? (
                 <div>
-                    <h2>Cours disponibles :</h2>
+                    <h2 className="titre-linklist">Cours disponibles :</h2>
                     {links
                         .map((linkItem, index) => (
                             <div className="linkItem" >
