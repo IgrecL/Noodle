@@ -62,9 +62,21 @@
     margin-bottom: 70px;
   }
 
+  .presentation-pop {
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-start;
+  }
+
   .description-pop {
     text-align: justify;
-    margin-left: 50px;
+    margin-left: 40px;
+    width: 60%;
+  }
+
+  .enseignant-pop {
+    margin-left: 60px;
+    width: 30%;
   }
   
   .close {

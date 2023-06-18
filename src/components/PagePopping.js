@@ -85,13 +85,14 @@ const PagePopping = ({ course, reset, cas2}) => {
                 </div>
               )}
             </div>
-            <p className='description-pop'>{course.description}</p>
+            <div className='presentation-pop'>
+              <div className='description-pop'>{course.description}</div>
+              <div className='enseignant-pop'> <span>Enseignants :</span> {course.authors}</div>
+            </div>
             <div className='linksList-pop'>
               <LinksList links={linksList} />
             </div>
-            <button className='close' onClick={handleCloseClick}>
-              ✖
-            </button>
+            <button className='close' onClick={handleCloseClick}>✖</button>
           </div>
         </div>
       )}
