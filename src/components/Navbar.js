@@ -9,6 +9,7 @@ import Searchbar from "./Searchbar";
 import { useEffect, useState } from 'react';
 import Profilepicture from './Profilepicture';
 import Notification from './Notification';
+import Logout from './Logout';
 
 
 
@@ -43,11 +44,12 @@ return(
     <header className={`header ${isNavbarTransparent ? 'transparent' : ''}`}>
     <img className='navbar__logo' src={logo} alt="Noodle Logo"/>
     <nav className='navbar'>
-    <NavLink className="custom-link" to="/" activeClassName="active">Accueil</NavLink>
+    <NavLink className="custom-link" to="/Noodle" activeClassName="active">Accueil</NavLink>
     <NavLink className="custom-link " to="/Mylist" activeClassName="active">Ma liste</NavLink>
     <Searchbar/>
     <Profilepicture/>
     <Notification/>
+    <Logout/>
     </nav>
    </header>)
 } 
