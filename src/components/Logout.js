@@ -6,7 +6,7 @@ function Logout() {
 
   return (
 
-    <NavLink className="custom-link" to="/" activeClassName="active">Logout</NavLink>
+    <NavLink className="custom-link" to="/" activeClassName="active">Se déconnecter</NavLink>
   )
 }
 export default Logout;
